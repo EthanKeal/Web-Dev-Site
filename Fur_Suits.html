@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Being a Furry - Fursuits</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="header">
+			<h1><img src="Images/Paw Logo.png" alt="Neo Reference" style="Width:7%">Being A Furry</h1>
+		</div>
+		
+		<div class="nav">
+  			<a href="Fur_Home.html">Home</a>
+  			<a href="Fur_About.html">About</a>
+  			<a href="Fur_Sonas.html">Sonas/Personas</a>
+			<a class="active" href="Fur_Suits.html">Fursuits</a>
+			<a href="Fur_Fandom.html">Fandom</a>
+		</div>
+		
+			<h1>Welcome to Fursuits</h1>
+			<p>A fursuit is a physical representation of your fursona made into a wearable costume. These can be designed to resemble any species of animal; real or fake. Some people even design their own species, such as the Dutch Angel Dragons (Image 2: Telephone) designed by Theinodog (Ino89777 - Youtube). </p>
+		<p>There are are loads of different makers around the world designing and making the fursuits you can find on the internet. All you need to do for the comission is give the creator a character sheet (Sonas/Personas), give them any specific information about sizes and any additional features.</p>
+		<p>People have decided to go to different conventions around the world to wear their fursuits with other people with the same interests.</p>
+			<p>As previously mentioned in the Sonas/Personas page, fursuits are designed by using a character's reference sheet.</p>
+			<p>The images bellow are of different fursuits in the community.</p>
+		
+		<div class="slideshow-container">
+  		<div class="mySlides fade">
+    	<div class="numbertext">1 / 3</div>
+    	<img src="images/PocariSuit.png" alt="Pocari Fursuit" style="width:50%" class="center">
+    	<div class="text">Pocari Roo - Soda Roo</div>
+ 		 </div>
+
+ 		 <div class="mySlides fade">
+   		 	<div class="numbertext">2 / 3</div>
+   		 	<img src="Images/TelephoneSuit.jpg" alt="Telephone Fursuit" style="width:60%" class="center">
+   		 	<div class="text">Telephone - Dutch Angel Dragon</div>
+  		</div>
+
+ 		 <div class="mySlides fade">
+    		<div class="numbertext">3 / 3</div>
+    		<img src="Images/MajiraSuit.png" alt="Telephone Fursuit" style="width:60%" class="center">
+   			<div class="text">Majira Strawberry</div>
+  		</div>
+			
+  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+		
+		<div style="text-align:center">
+  			<span class="dot" onclick="currentSlide(1)"></span>
+  			<span class="dot" onclick="currentSlide(2)"></span>
+  			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+		
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+  				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+  				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+  				var i;
+  				var slides = document.getElementsByClassName("mySlides");
+  				var dots = document.getElementsByClassName("dot");
+  				if (n > slides.length) {slideIndex = 1}    
+  				if (n < 1) {slideIndex = slides.length}
+  				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+  				}
+  				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+  				}
+  				slides[slideIndex-1].style.display = "block";  
+  				dots[slideIndex-1].className += " active";
+			}
+		</script>
+		
+	</body>
+</html>
